@@ -1,0 +1,18 @@
+difference:
+  usage: difference of {NUMBER} and {NUMBER}
+  description: Find the difference between two numbers
+  operator: difference of 
+  returns: int
+
+sum:
+  usage: add {NUMBER} and {NUMBER}
+  description: Find the sum of two numbers
+  operator: add
+  returns: int
+
+rationality:
+  usage: is {NUMBER} rational
+  description: Checks if a number is rational or irrational
+  operator: is rational 
+  returns: bool
+
