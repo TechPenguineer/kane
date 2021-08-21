@@ -1,5 +1,5 @@
 exec = kane
-sources = $(wildcard src/*.c)
+sources = $(wildcard src/*.c src/math/*/*.c)
 objects = $(sources:.c=.o)
 flags = -g
 
