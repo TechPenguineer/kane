@@ -4,6 +4,7 @@
 
 #include "include/io.h"
 #include "include/configs.h"
+#include "include/parser.h"
 
 void NoArgPrompt()
 {
@@ -74,7 +75,11 @@ int main(int argc, char* argv[])
    
            
            if(content)
-                printf("%s", content);
+           {
+               parser(content);
+           }
+
+
             else if(content == NULL)
                 printf("\033[1m\033[31m Interpreter Error: \"%s\" not found\033[0m\n", argv[2]);
            }
