@@ -1,6 +1,18 @@
 # Kane
  Simple language for doing math quickly and exporting calculation data
 
+# Interpreter
+
+Executing your code:
+```bash
+kane run [PATH_TO_FILE]
+```
+
+Opening a sandbox:
+```bash
+kane sandbox
+```
+
 # Language
 
 Finding the difference:
