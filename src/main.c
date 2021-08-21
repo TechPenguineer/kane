@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
 #include "include/configs.h"
 
 void NoArgPrompt()
@@ -17,7 +18,7 @@ void WriteLineInde()
 
     if(getline(&line, NULL, stdin) == -1)
     {
-        printf("\033[1m\033[31m Sandbox Error: Unable to accept line arguments")
+        printf("\033[1m\033[31m Sandbox Error: Unable to accept line arguments\n");
     }
     else
     {
