@@ -1,12 +1,21 @@
-CC=gcc
-EXT=.exe
-CONFIG=$(wildcard config/*.h)
-SOURCE=$(wildcard src/*.c)
-OUTDIR=$(CONFIG) $(SOURCE)
-CFLAGS= -g -std=standard
+exec = kane
+sources = $(wildcard src/*.c)
+objects = $(sources:.c=.o)
+flags = -g
 
-build: $(CONFIG)
-	$(CC) $(CFLAGS) $(SOURCE) -o $(wildcard out/)kane
+
+$(exec): $(objects)
+	gcc $(objects) $(flags) -o $(exec)
+
+%.o: %.c include/%.h
+	gcc -c $(flags) $< -o $@
+
+install:
+	make
+	sudo cp ./$(exec) /usr/local/bin/$(exec)
 
 clean:
-	-rm out/*
+	-rm *.out
+	-rm *.o
+	-rm src/*.o
+	-sudo rm /usr/local/bin/$(exec)

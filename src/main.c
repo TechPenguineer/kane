@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "config/config.h"
+#include "include/configs.h"
 
 int main(int argc, char **argv[])
 {
