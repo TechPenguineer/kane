@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "include/io.h"
 #include "include/configs.h"
 
 void NoArgPrompt()
@@ -41,7 +42,7 @@ void OpenSandboxPrompt()
 }
 int main(int argc, char* argv[])
 {
-    int RUN_ARG_LEN = 2;
+    int RUN_ARG_LEN = 3;
 
     char OUT_FILE_EXT[] = "kno";
     char LANG_FILE_EXT[] = "kn";
@@ -65,6 +66,12 @@ int main(int argc, char* argv[])
         {
             printf("Run Error: Not enough arguments supplied\n");
         }
+        if (argc == RUN_ARG_LEN)
+        {
+           char* content = readFile(argv[2]);
+           printf("%s", content);
+        }
+        
     }
 
     if(strcmp(argv[1], "sandbox")==0)
