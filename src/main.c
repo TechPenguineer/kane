@@ -11,10 +11,22 @@ void NoArgPrompt()
 void WriteLineInde()
 {
     printf("\n");
-    printf("\033[1m\033[31m  =\033[1m\033[33m>\033[1m\033[37m\n");
+    printf("\033[1m\033[31m  =\033[1m\033[33m>\033[1m\033[37m");
+
+    char *line = NULL;
+
+    if(getline(&line, NULL, stdin) == -1)
+    {
+        printf("\033[1m\033[31m Sandbox Error: Unable to accept line arguments")
+    }
+    else
+    {
+        printf("%s\n",line);
+    }
 }
 void OpenSandboxPrompt()
 {
+    
     printf("\033[32m /$$   /$$                              \n");
     printf("| $$  /$$/                              \n");
     printf("| $$ /$$/   /$$$$$$  /$$$$$$$   /$$$$$$ \n");
