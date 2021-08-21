@@ -6,4 +6,7 @@ OUTDIR=$(CONFIG) $(SOURCE)
 CFLAGS= -g
 
 build: $(CONFIG)
-	$(CC) $(CFLAGS) $(SOURCE) -o $(wildcard out/)kane$(EXT)
+	$(CC) $(CFLAGS) $(SOURCE) -o $(wildcard out/)kane
+
+clean:
+	-rm out/*

@@ -2,8 +2,7 @@
 #define KANE_CONFIG
 
 
-extern char OUT_FILE_EXT[] = "kno";
-extern char LANG_FILE_EXT[] = "kn";
-
+extern char OUT_FILE_EXT[];
+extern char LANG_FILE_EXT[];
 
 #endif
