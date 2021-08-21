@@ -7,9 +7,15 @@ void NoArgPrompt()
 {
     printf("Kane - Version 0.0.0.1");
 }
+
+void WriteLineInde()
+{
+    printf("\n");
+    printf("\033[1m\033[31m  =\033[1m\033[33m>\033[1m\033[37m\n");
+}
 void OpenSandboxPrompt()
 {
-    printf(" /$$   /$$                              \n");
+    printf("\033[32m /$$   /$$                              \n");
     printf("| $$  /$$/                              \n");
     printf("| $$ /$$/   /$$$$$$  /$$$$$$$   /$$$$$$ \n");
     printf("| $$$$$/   |____  $$| $$__  $$ /$$__  $$\n");
@@ -17,6 +23,8 @@ void OpenSandboxPrompt()
     printf("| $$\\  $$  /$$__  $$| $$  | $$| $$_____/\n");
     printf("| $$ \\  $$|  $$$$$$$| $$  | $$|  $$$$$$$\n");
     printf("|__/  \\__/ \\_______/|__/  |__/ \\_______/\n");
+    printf("\n\n");
+    WriteLineInde();
 }
 int main(int argc, char* argv[])
 {
@@ -49,5 +57,6 @@ int main(int argc, char* argv[])
     if(strcmp(argv[1], "sandbox")==0)
     {
         OpenSandboxPrompt();
+        
     }
 }
