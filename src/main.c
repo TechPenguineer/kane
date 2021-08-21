@@ -69,13 +69,15 @@ int main(int argc, char* argv[])
         if (argc == RUN_ARG_LEN)
         {
            char* content = readFile(argv[2]);
-
+           
+           int len = strlen(argv[2]);
+   
+           
            if(content)
                 printf("%s", content);
             else if(content == NULL)
                 printf("\033[1m\033[31m Interpreter Error: \"%s\" not found\033[0m\n", argv[2]);
-
-        }
+           }
         
     }
 
