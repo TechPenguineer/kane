@@ -48,7 +48,7 @@ int main(int argc, char* argv[])
     char OUT_FILE_EXT[] = "kno";
     char LANG_FILE_EXT[] = "kn";
 
-    if(argc==0)
+    if(argc==1)
     {
         NoArgPrompt();
     }
@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
            char* content = readFile(argv[2]);
            
            int len = strlen(argv[2]);
-   
+    
            
            if(content)
            {

@@ -14,9 +14,7 @@ char *readFile(char* filename)
 
         if(buffer)
         {
-            fscanf(f, " ");
             fread(buffer,1,length,f);
-
         }
         fclose(f);
     }
