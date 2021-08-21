@@ -31,7 +31,7 @@ Check if is rational:
 # Input
 number = sqrt of 3
 x = is number rational
-print(x)
+write(x)
 
 # Output
 False
